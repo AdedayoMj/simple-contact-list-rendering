@@ -1,4 +1,4 @@
-# SLOT-MACHINE
+# CONTACT LIST
 A simple react task to render uses contacts list using fake mockAPI.
 
 ![image](https://user-images.githubusercontent.com/53113836/143238465-a8135833-1d14-43a0-bae5-63b9f98a80ce.png)
