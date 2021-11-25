@@ -18,7 +18,7 @@
       "paths": {
           "app/components": ["src/components"],
           "app/api": ["src/api"],
-          "app/common": ["src/common"],
+          "app/common": ["src/common"]
       }
   },
   "include": [
