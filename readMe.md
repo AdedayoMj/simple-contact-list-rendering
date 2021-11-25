@@ -10,7 +10,7 @@ A simple react task to render uses contacts list using fake mockAPI.
 
 
 ## Setup
-
+Demo Link: https://kntestcontacts.netlify.app/
 
 ### 1. Clone this repo:
 ```git clone https://github.com/AdedayoMj/simple-contact-list-rendering.git```
@@ -28,6 +28,7 @@ Navigate to the cloned repo's directory and run:
 Run the command to start up server 
 ```yarn start```.
 Verify the json file by Open your browser and enter : localhost:3000/contacts
+Deployed server link: https://mockserverkn.herokuapp.com/
 sample shown below:
 
 ```
