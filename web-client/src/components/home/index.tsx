@@ -12,6 +12,7 @@ import TextField from '@material-ui/core/TextField';
 import api from '../../api/contact';
 
 import Pagination from '@material-ui/lab/Pagination';
+import logging from '../../common/logging';
 const useStyles = makeStyles((theme: Theme) => ({
   pagination: {
     display: 'flex',
@@ -20,6 +21,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     gap: '1rem',
     margin: '1rem 0',
     marginTop: 'auto',
+  },
+  text: {
+    fontSize: 18,
+    color: 'grey',
+    margin: 30,
+    alignContent: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
   },
 }));
 
@@ -56,10 +65,13 @@ const HomePageView: React.FunctionComponent = () => {
       try {
         const allContacts = await retrieveContacts();
         if (allContacts) setContacts(allContacts);
-      } catch {
+      } catch (error) {
         setError(true);
+        logging.error(error);
       } finally {
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
       }
     })();
   }, []);
@@ -116,12 +128,14 @@ const HomePageView: React.FunctionComponent = () => {
             })}
           </Grid>
         ) : (
-          <Typography>Contact not found</Typography>
+          !loading && (
+            <Typography className={classes.text}>Contacts not found</Typography>
+          )
         )}
       </Box>
 
       <br />
-      {contactArray.length > 0 && (
+      {contactArray.length > 0 && !loading && (
         <Box className={classes.pagination}>
           <Pagination
             count={pageCount}
