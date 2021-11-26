@@ -82,10 +82,9 @@ const HomePageView: React.FunctionComponent = () => {
   const lastContentIndex = page * contentPerPage;
   // index of first item of current page
   const firstContentIndex = lastContentIndex - contentPerPage;
-  const currentContacts = contactArray.slice(
-    firstContentIndex,
-    lastContentIndex
-  );
+  const currentContacts = contactArray
+    .sort((a, b) => (a.name > b.name ? 1 : -1))
+    .slice(firstContentIndex, lastContentIndex);
 
   return (
     <Container>
