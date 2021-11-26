@@ -10,10 +10,12 @@ A simple react task to render uses contacts list using fake mockAPI.
 
 
 ## Setup
-Demo Link: https://kntestcontacts.netlify.app/
+
 
 ### 1. Clone this repo:
 ```git clone https://github.com/AdedayoMj/simple-contact-list-rendering.git```
+
+Demo Link: https://kntestcontacts.netlify.app/
 
 ### 2. Install dependencies:
 
